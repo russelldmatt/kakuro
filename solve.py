@@ -66,3 +66,4 @@ board = [None] * 15
 # print possibilities(board, 0)
 print brute_force(board, sum_constraints)
 
+

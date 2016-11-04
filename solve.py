@@ -39,12 +39,15 @@ def brute_force(board, sum_constraints):
             return None
     return brute_force_loop(board, sum_constraints, 0)
 
-# ascii board:
-# |    |    |  0 | 1 |   |
-# |    |    |  2 | 3 | 4 |
-# |  5 |  6 |  7 | 8 | 9 |
-# | 10 | 11 | 12 |   |   |
-# |    | 13 | 14 |   |   |
+# ascii board: sums are in parens, otherwise numbers refer to index into [board]
+# |------+------+--------+------+------+-----|
+# |      |      |        | (34) | (16) |     |
+# |      |      |    (8) |    0 |    1 | (8) |
+# |      | (13) | (8\21) |    2 |    3 |   4 |
+# | (18) |    5 |      6 |    7 |    8 |   9 |
+# | (21) |   10 |     11 |   12 |      |     |
+# |      | (11) |     13 |   14 |      |     |
+# |------+------+--------+------+------+-----|
 
 # (indices of board * sum) list
 sum_constraints = [
